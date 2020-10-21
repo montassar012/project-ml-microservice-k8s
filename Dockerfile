@@ -1,5 +1,6 @@
 FROM python:3.7.3-stretch
 LABEL MAINTAINER="mkallali"
+
 ## Step 1:
 # Create a working directory
 WORKDIR /app
@@ -18,4 +19,3 @@ EXPOSE 80
 ## Step 5:
 # Run app.py at container launch
 ENTRYPOINT [ "python3","app.py" ]
-
