@@ -1,0 +1,7 @@
+.devops) monta@monta project-ml-microservice-kubernetes % ./run_kubernetes.sh        
+pod/pred-app created
+NAME       READY   STATUS              RESTARTS   AGE
+pred-app   0/1     ContainerCreating   0          0s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
