@@ -46,4 +46,4 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 
 # master branch :
-[![<montassar012>](https://circleci.com/gh/montassar012/project-ml-microservice-k8s.svg?style=svg)](https://circleci.com/gh/montassar012/project-ml-microservice-k8s/7)
+[![<montassar012>](https://circleci.com/gh/montassar012/project-ml-microservice-k8s.svg?style=svg)](https://circleci.com/gh/montassar012/project-ml-microservice-k8s)
