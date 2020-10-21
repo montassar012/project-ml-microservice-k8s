@@ -40,3 +40,10 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+
+### CirclleCI BUILD
+
+
+# master branch :
+[![<montassar012>](https://circleci.com/gh/montassar012/project-ml-microservice-k8s.svg?style=svg)](https://circleci.com/gh/montassar012/project-ml-microservice-k8s/7)
