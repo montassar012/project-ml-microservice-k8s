@@ -1,7 +1,36 @@
-.devops) monta@monta project-ml-microservice-kubernetes % ./run_kubernetes.sh        
-pod/pred-app created
-NAME       READY   STATUS              RESTARTS   AGE
-pred-app   0/1     ContainerCreating   0          0s
-Forwarding from 127.0.0.1:8000 -> 80
-Forwarding from [::1]:8000 -> 80
-Handling connection for 8000
+monta@monta project-ml-microservice-kubernetes % kubectl logs -f pred-app
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 184-447-268
+[2020-10-20 20:58:50,636] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-10-20 20:58:50,649] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-10-20 20:58:50,658] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-10-20 20:58:50,661] INFO in app: Scaled Playload :
+[[0. 0. 0. 0. 0. 0.]]
+[2020-10-20 20:58:50,661] INFO in app: Prediction Result :
+[20.35373177134412]
+127.0.0.1 - - [20/Oct/2020 20:58:50] "POST /predict HTTP/1.1" 200 -
+[2020-10-25 19:14:37,888] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-10-25 19:14:37,989] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-10-25 19:14:37,997] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-10-25 19:14:38,012] INFO in app: Scaled Playload :
+[[0. 0. 0. 0. 0. 0.]]
+[2020-10-25 19:14:38,036] INFO in app: Prediction Result :
+[20.35373177134412]
+127.0.0.1 - - [25/Oct/2020 19:14:38] "POST /predict HTTP/1.1" 200 -
